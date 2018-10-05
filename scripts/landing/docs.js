@@ -1,5 +1,5 @@
 
-class Landing {
+class Docs {
     textbody () {
         let msgCss = {
             "float": "none",
@@ -10,36 +10,31 @@ class Landing {
         }
         let msg1 = $jConstruct('div', {
             class: 'col-lg-8 col-sm-10 col-xs-12',
-            text: `You are visiting Baily's Camera Server.`
+            text: `You are viewing Bailys Documentation.`
         }).css(msgCss);
         let msg2 = $jConstruct('a', {
             class: 'col-lg-8 col-sm-10 col-xs-12',
-            href: "http://192.168.100.57/zm",
-            text: `ZoneMinder`,
+            href: "resource/pdf/BailysCameraSystem.pdf",
+            text: `Camera Server`,
         }).css(msgCss);
         let msg3 = $jConstruct('a', {
             class: 'col-lg-8 col-sm-10 col-xs-12',
-            href: "http://192.168.2.8/",
-            text: `FreeNAS`,
+            href: "resource/pdf/VPNGuide.pdf",
+            text: `VPNGuide`,
         }).css(msgCss);
         let msg4 = $jConstruct('a', {
             class: 'col-lg-8 col-sm-10 col-xs-12',
-            href: "https://oldtowndining.com/",
-            text: `Old Town Dining LLC Website`,
+            href: "resource/pdf/passwordRecoveryForm-Print this one.pdf",
+            text: `Password Recovery Form`,
         }).css(msgCss);
         let msg5 = $jConstruct('a', {
             class: 'col-lg-8 col-sm-10 col-xs-12',
-            href: "https://baily.com/",
-            text: `Bailys Website`,
-        }).css(msgCss);
-        let msg6 = $jConstruct('a', {
-            class: 'col-lg-8 col-sm-10 col-xs-12',
-            href: "docs.html",
-            text: `View Bailys Documentation`,
+            href: "resource/pdf/bailysGoldPass.pdf",
+            text: `Bailys Gold Pass`,
         }).css(msgCss);
 
         let message = $jConstruct('div');
-        message.addChild(msg1).addChild(msg2).addChild(msg3).addChild(msg4).addChild(msg5).addChild(msg6);
+        message.addChild(msg1).addChild(msg2).addChild(msg3).addChild(msg4).addChild(msg5);
 
         return message;
     }
@@ -53,7 +48,7 @@ class Landing {
         });
         let banner = $jConstruct('div', {
             class: "col-lg-10 col-sm-12",
-            text: "Bailys",
+            text: "Bailys Documentation",
         }).css({
             "float": "none",
             "display": "block",
