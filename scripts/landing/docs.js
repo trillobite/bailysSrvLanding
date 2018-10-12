@@ -32,9 +32,19 @@ class Docs {
             href: "resource/pdf/bailysGoldPass.pdf",
             text: `Bailys Gold Pass`,
         }).css(msgCss);
+        let msg6 = $jConstruct('a', {
+            class: 'col-lg-8 col-sm-10 col-xs-12',
+            href: "resource/pdf/Bailys Troubleshoooting.pdf",
+            text: "Troubleshooting",
+        }).css(msgCss);
+        let msg7 = $jConstruct('a', {
+            class: 'col-lg-8 col-sm-10 col-xs-12',
+            href: "resource/pdf/passwordManagementSystem.pdf",
+            text: "Password Management",
+        }).css(msgCss);
 
         let message = $jConstruct('div');
-        message.addChild(msg1).addChild(msg2).addChild(msg3).addChild(msg4).addChild(msg5);
+        message.addChild(msg1).addChild(msg2).addChild(msg3).addChild(msg4).addChild(msg5).addChild(msg6).addChild(msg7);
 
         return message;
     }
