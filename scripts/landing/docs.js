@@ -42,9 +42,19 @@ class Docs {
             href: "resource/pdf/passwordManagementSystem.pdf",
             text: "Password Management",
         }).css(msgCss);
+        let msg8 = $jConstruct('a', {
+            class: "col-lg-8 col-sm-10 col-xs-12",
+            href: "https://zoneminder.readthedocs.io/en/stable/index.html",
+            text: "ZoneMinder Official Documentation",
+        }).css(msgCss);
+        let msg9 = $jConstruct('a', {
+            class: "col-lg-8 col-sm-10 col-xs-12",
+            href: "http://doc.freenas.org/11/freenas.html",
+            text: "FreeNAS Official Documentation",
+        }).css(msgCss);
 
         let message = $jConstruct('div');
-        message.addChild(msg1).addChild(msg2).addChild(msg3).addChild(msg4).addChild(msg5).addChild(msg6).addChild(msg7);
+        message.addChild(msg1).addChild(msg2).addChild(msg3).addChild(msg4).addChild(msg5).addChild(msg6).addChild(msg7).addChild(msg8).addChild(msg9);
 
         return message;
     }
