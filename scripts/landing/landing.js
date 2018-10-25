@@ -17,6 +17,11 @@ class Landing {
             href: "http://192.168.100.57/zm",
             text: `ZoneMinder`,
         }).css(msgCss);
+        let msg2 = $jConstruct('a', {
+            class: 'col-lg-8 col-sm-10 col-xs-12',
+            href: "http://192.168.100.57:2812",
+            text: `Monit`,
+        }).css(msgCss);
         let msg3 = $jConstruct('a', {
             class: 'col-lg-8 col-sm-10 col-xs-12',
             href: "http://192.168.2.8/",
