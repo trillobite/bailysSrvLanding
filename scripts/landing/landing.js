@@ -17,34 +17,34 @@ class Landing {
             href: "http://192.168.100.57/zm",
             text: `ZoneMinder`,
         }).css(msgCss);
-        let msg2 = $jConstruct('a', {
+        let msg3 = $jConstruct('a', {
             class: 'col-lg-8 col-sm-10 col-xs-12',
             href: "http://192.168.100.57:2812",
             text: `Monit`,
         }).css(msgCss);
-        let msg3 = $jConstruct('a', {
+        let msg4 = $jConstruct('a', {
             class: 'col-lg-8 col-sm-10 col-xs-12',
             href: "http://192.168.2.8/",
             text: `FreeNAS`,
         }).css(msgCss);
-        let msg4 = $jConstruct('a', {
+        let msg5 = $jConstruct('a', {
             class: 'col-lg-8 col-sm-10 col-xs-12',
             href: "https://oldtowndining.com/",
             text: `Old Town Dining LLC Website`,
         }).css(msgCss);
-        let msg5 = $jConstruct('a', {
+        let msg6 = $jConstruct('a', {
             class: 'col-lg-8 col-sm-10 col-xs-12',
             href: "https://baily.com/",
             text: `Bailys Website`,
         }).css(msgCss);
-        let msg6 = $jConstruct('a', {
+        let msg7 = $jConstruct('a', {
             class: 'col-lg-8 col-sm-10 col-xs-12',
             href: "docs.html",
             text: `View Bailys Documentation`,
         }).css(msgCss);
 
         let message = $jConstruct('div');
-        message.addChild(msg1).addChild(msg2).addChild(msg3).addChild(msg4).addChild(msg5).addChild(msg6);
+        message.addChild(msg1).addChild(msg2).addChild(msg3).addChild(msg4).addChild(msg5).addChild(msg6).addChild(msg7);
 
         return message;
     }
