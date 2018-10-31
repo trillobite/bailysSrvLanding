@@ -1,6 +1,7 @@
 
 class Landing {
     textbody () {
+        const btnClass = 'col-lg-4 col-sm-8 col-xs-12';
         let msgCss = {
             "float": "none",
             "display": "block",
@@ -8,43 +9,54 @@ class Landing {
             "margin-top": "10px",
             "text-align": "center",
         }
-        let msg1 = $jConstruct('div', {
-            class: 'col-lg-8 col-sm-10 col-xs-12',
-            text: `You are visiting Baily's Camera Server.`
-        }).css(msgCss);
-        let msg2 = $jConstruct('a', {
-            class: 'col-lg-8 col-sm-10 col-xs-12',
-            href: "http://192.168.100.57/zm",
-            text: `ZoneMinder`,
-        }).css(msgCss);
-        let msg3 = $jConstruct('a', {
-            class: 'col-lg-8 col-sm-10 col-xs-12',
-            href: "http://192.168.100.57:2812",
-            text: `Monit`,
-        }).css(msgCss);
-        let msg4 = $jConstruct('a', {
-            class: 'col-lg-8 col-sm-10 col-xs-12',
-            href: "http://192.168.2.8/",
-            text: `FreeNAS`,
-        }).css(msgCss);
-        let msg5 = $jConstruct('a', {
-            class: 'col-lg-8 col-sm-10 col-xs-12',
-            href: "https://oldtowndining.com/",
-            text: `Old Town Dining LLC Website`,
-        }).css(msgCss);
-        let msg6 = $jConstruct('a', {
-            class: 'col-lg-8 col-sm-10 col-xs-12',
-            href: "https://baily.com/",
-            text: `Bailys Website`,
-        }).css(msgCss);
-        let msg7 = $jConstruct('a', {
-            class: 'col-lg-8 col-sm-10 col-xs-12',
-            href: "docs.html",
-            text: `View Bailys Documentation`,
-        }).css(msgCss);
+
+        const links = [
+            $jConstruct('div', {
+                class: btnClass,
+                text: `You are visiting Baily's Camera Server.`
+            }).css(msgCss),
+            $jConstruct('a', {
+                class: btnClass,
+                href: "http://192.168.100.57/zm",
+                text: `ZoneMinder`,
+            }).css(msgCss),
+            $jConstruct('a', {
+                class: btnClass,
+                href: "http://192.168.100.57:2812",
+                text: `Monit`,
+            }).css(msgCss),
+            $jConstruct('a', {
+                class: btnClass,
+                href: "https://192.168.100.57:1337",
+                text: "Unifi"
+            }).css(msgCss),
+            $jConstruct('a', {
+                class: btnClass,
+                href: "http://192.168.2.8/",
+                text: `FreeNAS`,
+            }).css(msgCss),
+            $jConstruct('a', {
+                class: btnClass,
+                href: "https://oldtowndining.com/",
+                text: `Old Town Dining LLC Website`,
+            }).css(msgCss),
+            $jConstruct('a', {
+                class: btnClass,
+                href: "https://baily.com/",
+                text: `Bailys Website`,
+            }).css(msgCss),
+            $jConstruct('a', {
+                class: btnClass,
+                href: "docs.html",
+                text: `View Bailys Documentation`,
+            }).css(msgCss),
+        ];
 
         let message = $jConstruct('div');
-        message.addChild(msg1).addChild(msg2).addChild(msg3).addChild(msg4).addChild(msg5).addChild(msg6).addChild(msg7);
+
+        for(var i = 0; i < links.length; ++i) {
+            message.addChild(links[i]);
+        }
 
         return message;
     }

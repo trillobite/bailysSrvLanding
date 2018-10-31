@@ -1,6 +1,7 @@
 
 class Docs {
     textbody () {
+        const btnClass = 'col-lg-4 col-sm-8 col-xs-12';
         let msgCss = {
             "float": "none",
             "display": "block",
@@ -8,53 +9,69 @@ class Docs {
             "margin-top": "10px",
             "text-align": "center",
         }
-        let msg1 = $jConstruct('div', {
-            class: 'col-lg-8 col-sm-10 col-xs-12',
-            text: `You are viewing Bailys Documentation.`
-        }).css(msgCss);
-        let msg2 = $jConstruct('a', {
-            class: 'col-lg-8 col-sm-10 col-xs-12',
-            href: "resource/pdf/BailysCameraSystem.pdf",
-            text: `Camera Server`,
-        }).css(msgCss);
-        let msg3 = $jConstruct('a', {
-            class: 'col-lg-8 col-sm-10 col-xs-12',
-            href: "resource/pdf/VPNGuide.pdf",
-            text: `VPNGuide`,
-        }).css(msgCss);
-        let msg4 = $jConstruct('a', {
-            class: 'col-lg-8 col-sm-10 col-xs-12',
-            href: "resource/pdf/passwordRecoveryForm-Print this one.pdf",
-            text: `Password Recovery Form`,
-        }).css(msgCss);
-        let msg5 = $jConstruct('a', {
-            class: 'col-lg-8 col-sm-10 col-xs-12',
-            href: "resource/pdf/bailysGoldPass.pdf",
-            text: `Bailys Gold Pass`,
-        }).css(msgCss);
-        let msg6 = $jConstruct('a', {
-            class: 'col-lg-8 col-sm-10 col-xs-12',
-            href: "resource/pdf/Bailys Troubleshoooting.pdf",
-            text: "Troubleshooting",
-        }).css(msgCss);
-        let msg7 = $jConstruct('a', {
-            class: 'col-lg-8 col-sm-10 col-xs-12',
-            href: "resource/pdf/passwordManagementSystem.pdf",
-            text: "Password Management",
-        }).css(msgCss);
-        let msg8 = $jConstruct('a', {
-            class: "col-lg-8 col-sm-10 col-xs-12",
-            href: "https://zoneminder.readthedocs.io/en/stable/index.html",
-            text: "ZoneMinder Official Documentation",
-        }).css(msgCss);
-        let msg9 = $jConstruct('a', {
-            class: "col-lg-8 col-sm-10 col-xs-12",
-            href: "http://doc.freenas.org/11/freenas.html",
-            text: "FreeNAS Official Documentation",
-        }).css(msgCss);
+
+        const links = [
+            $jConstruct('div', {
+                class: btnClass,
+                text: `You are viewing Bailys Documentation.`
+            }).css(msgCss),
+            $jConstruct('a', {
+                class: btnClass,
+                href: "resource/pdf/BailysCameraSystem.pdf",
+                text: `Camera Server`,
+            }).css(msgCss),
+            $jConstruct('a', {
+                class: btnClass,
+                href: "resource/pdf/VPNGuide.pdf",
+                text: `VPNGuide`,
+            }).css(msgCss),
+            $jConstruct('a', {
+                class: btnClass,
+                href: "resource/pdf/passwordRecoveryForm-Print this one.pdf",
+                text: `Password Recovery Form`,
+            }).css(msgCss),
+            $jConstruct('a', {
+                class: btnClass,
+                href: "resource/pdf/bailysGoldPass.pdf",
+                text: `Bailys Gold Pass`,
+            }).css(msgCss),
+            $jConstruct('a', {
+                class: btnClass,
+                href: "resource/pdf/Bailys Troubleshoooting.pdf",
+                text: "Troubleshooting",
+            }).css(msgCss),
+            $jConstruct('a', {
+                class: btnClass,
+                href: "resource/pdf/passwordManagementSystem.pdf",
+                text: "Password Management",
+            }).css(msgCss),
+            $jConstruct('a', {
+                class: btnClass,
+                href: "resource/pdf/BailysUnifi.pdf",
+                text: "Unifi Mesh Network",
+            }).css(msgCss),
+            $jConstruct('a', {
+                class: btnClass,
+                href: "resource/pdf/Bailys Monit.pdf",
+                text: "Monit Automated System Recovery",
+            }).css(msgCss),
+            $jConstruct('a', {
+                class: btnClass,
+                href: "https://zoneminder.readthedocs.io/en/stable/index.html",
+                text: "ZoneMinder Official Documentation",
+            }).css(msgCss),
+            $jConstruct('a', {
+                class: btnClass,
+                href: "http://doc.freenas.org/11/freenas.html",
+                text: "FreeNAS Official Documentation",
+            }).css(msgCss),
+        ];
 
         let message = $jConstruct('div');
-        message.addChild(msg1).addChild(msg2).addChild(msg3).addChild(msg4).addChild(msg5).addChild(msg6).addChild(msg7).addChild(msg8).addChild(msg9);
+
+        for(var i = 0; i < links.length; ++i) {
+            message.addChild(links[i]);
+        }
 
         return message;
     }
